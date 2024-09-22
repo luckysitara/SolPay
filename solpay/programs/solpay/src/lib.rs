@@ -1,6 +1,6 @@
 use anchor_lang::prelude::*;
 
-declare_id!("J37eUfHSrGJNe7cbweBxg8Z344SWCNF31WMg9nYkboYw");
+declare_id!("FdZax2EXLhBmBZ6yjjo7qxNyjMxKkHyGi3EX1txuXo8K");
 
 #[program]
 pub mod solpay {
@@ -10,22 +10,7 @@ pub mod solpay {
         msg!("Greetings from: {:?}", ctx.program_id);
         Ok(())
     }
-
-    pub fn process_payment(ctx: Context<Payment>, amount: u64) -> Result<()> {
-        msg!("Processing payment of {} tokens", amount);
-        Ok(())
-    }
 }
 
 #[derive(Accounts)]
 pub struct Initialize {}
-
-#[derive(Accounts)]
-pub struct Payment<'info> {
-    #[account(mut)]
-    pub user: Signer<'info>,
-    
-    /// CHECK: This is a manual account, we are trusting the vault is initialized correctly elsewhere
-    #[account(mut)]
-    pub vault: AccountInfo<'info>,
-}

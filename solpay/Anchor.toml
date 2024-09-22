@@ -5,7 +5,7 @@ resolution = true
 skip-lint = false
 
 [programs.localnet]
-solpay = "J37eUfHSrGJNe7cbweBxg8Z344SWCNF31WMg9nYkboYw"
+solpay = "FdZax2EXLhBmBZ6yjjo7qxNyjMxKkHyGi3EX1txuXo8K"
 
 [registry]
 url = "https://api.apr.dev"
@@ -15,5 +15,4 @@ cluster = "Localnet"
 wallet = "~/.config/solana/id.json"
 
 [scripts]
-test = "npx ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
-
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
