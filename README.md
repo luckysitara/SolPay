@@ -1,7 +1,7 @@
-# SolanaPay
+# SolPay
 
 ## Overview
-SolanaPay is a decentralized payment gateway built on the Solana blockchain, enabling users to send and receive payments in various cryptocurrencies quickly, securely, and with low fees. It aims to provide a competitive alternative to traditional payment gateways by leveraging Solana’s high transaction throughput and decentralized network.
+SolPay is a decentralized payment gateway built on the Solana blockchain, enabling users to send and receive payments in various cryptocurrencies quickly, securely, and with low fees. It aims to provide a competitive alternative to traditional payment gateways by leveraging Solana’s high transaction throughput and decentralized network.
 
 ## Problem Statement
 Traditional payment gateways like Stripe, PayPal, and Paystack face several issues that hinder seamless financial transactions for both merchants and customers:
@@ -12,7 +12,7 @@ Traditional payment gateways like Stripe, PayPal, and Paystack face several issu
 - **Complex Integration:** Integrating traditional gateways can be cumbersome and expensive, especially for small and medium-sized enterprises (SMEs).
 
 ## Solution
-SolanaPay addresses these problems by offering a decentralized, multi-currency payment gateway built on the Solana blockchain. The solution leverages Solana's high transaction throughput, low fees, and secure decentralized network to provide a superior payment processing experience.
+SolPay addresses these problems by offering a decentralized, multi-currency payment gateway built on the Solana blockchain. The solution leverages Solana's high transaction throughput, low fees, and secure decentralized network to provide a superior payment processing experience.
 
 ## Key Features
 
