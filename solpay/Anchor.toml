@@ -4,14 +4,14 @@
 resolution = true
 skip-lint = false
 
-[programs.localnet]
-solpay = "FdZax2EXLhBmBZ6yjjo7qxNyjMxKkHyGi3EX1txuXo8K"
+[programs.devnet]
+solpay = "eAG4xFmLvG3fbVFJeznEPh6w7o3t4zSUA8SAecChCUi"
 
 [registry]
 url = "https://api.apr.dev"
 
 [provider]
-cluster = "Localnet"
+cluster = "devnet"
 wallet = "~/.config/solana/id.json"
 
 [scripts]
