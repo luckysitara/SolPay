@@ -1,0 +1,512 @@
+error[E0412]: cannot find type `CloseAccountData` in this scope
+   --> src/extension/confidential_transfer/instruction.rs:688:18
+    |
+688 |     proof_data: &CloseAccountData,
+    |                  ^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0412]: cannot find type `WithdrawWithheldTokensData` in this scope
+    --> src/extension/confidential_transfer/instruction.rs:1086:18
+     |
+497  | pub struct WithdrawWithheldTokensFromMintData {
+     | --------------------------------------------- similarly named struct `WithdrawWithheldTokensFromMintData` defined here
+...
+1086 |     proof_data: &WithdrawWithheldTokensData,
+     |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^ help: a struct with a similar name exists: `WithdrawWithheldTokensFromMintData`
+
+error[E0412]: cannot find type `WithdrawWithheldTokensData` in this scope
+    --> src/extension/confidential_transfer/instruction.rs:1151:18
+     |
+497  | pub struct WithdrawWithheldTokensFromMintData {
+     | --------------------------------------------- similarly named struct `WithdrawWithheldTokensFromMintData` defined here
+...
+1151 |     proof_data: &WithdrawWithheldTokensData,
+     |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^ help: a struct with a similar name exists: `WithdrawWithheldTokensFromMintData`
+
+error[E0412]: cannot find type `CloseAccountData` in this scope
+   --> src/extension/confidential_transfer/processor.rs:283:49
+    |
+283 |     let proof_data = decode_proof_instruction::<CloseAccountData>(
+    |                                                 ^^^^^^^^^^^^^^^^ not found in this scope
+    |
+help: you might be missing a type parameter
+    |
+255 | fn process_empty_account<CloseAccountData>(
+    |                         ++++++++++++++++++
+
+error[E0412]: cannot find type `WithdrawWithheldTokensData` in this scope
+   --> src/extension/confidential_transfer/processor.rs:985:49
+    |
+985 |     let proof_data = decode_proof_instruction::<WithdrawWithheldTokensData>(
+    |                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+   ::: src/extension/confidential_transfer/instruction.rs:497:1
+    |
+497 | pub struct WithdrawWithheldTokensFromMintData {
+    | --------------------------------------------- similarly named struct `WithdrawWithheldTokensFromMintData` defined here
+    |
+help: a struct with a similar name exists
+    |
+985 |     let proof_data = decode_proof_instruction::<WithdrawWithheldTokensFromMintData>(
+    |                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+help: you might be missing a type parameter
+    |
+933 | fn process_withdraw_withheld_tokens_from_mint<WithdrawWithheldTokensData>(
+    |                                              ++++++++++++++++++++++++++++
+
+error[E0412]: cannot find type `WithdrawWithheldTokensData` in this scope
+    --> src/extension/confidential_transfer/processor.rs:1116:49
+     |
+1116 |     let proof_data = decode_proof_instruction::<WithdrawWithheldTokensData>(
+     |                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+     |
+    ::: src/extension/confidential_transfer/instruction.rs:497:1
+     |
+497  | pub struct WithdrawWithheldTokensFromMintData {
+     | --------------------------------------------- similarly named struct `WithdrawWithheldTokensFromMintData` defined here
+     |
+help: a struct with a similar name exists
+     |
+1116 |     let proof_data = decode_proof_instruction::<WithdrawWithheldTokensFromMintData>(
+     |                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+help: you might be missing a type parameter
+     |
+1033 | fn process_withdraw_withheld_tokens_from_accounts<WithdrawWithheldTokensData>(
+     |                                                  ++++++++++++++++++++++++++++
+
+error[E0425]: cannot find function `verify_close_account` in this scope
+   --> src/extension/confidential_transfer/instruction.rs:698:9
+    |
+698 |         verify_close_account(proof_data),
+    |         ^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `verify_withdraw_withheld_tokens` in this scope
+    --> src/extension/confidential_transfer/instruction.rs:1097:9
+     |
+1097 |         verify_withdraw_withheld_tokens(proof_data),
+     |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `verify_withdraw_withheld_tokens` in this scope
+    --> src/extension/confidential_transfer/instruction.rs:1163:9
+     |
+1163 |         verify_withdraw_withheld_tokens(proof_data),
+     |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0599]: no variant or associated item named `decode_type` found for enum `solana_zk_token_sdk::zk_token_proof_instruction::ProofInstruction` in the current scope
+  --> src/extension/confidential_transfer/processor.rs:41:30
+   |
+41 |         || ProofInstruction::decode_type(&instruction.data) != Some(expected)
+   |                              ^^^^^^^^^^^ variant or associated item not found in `ProofInstruction`
+   |
+note: if you're trying to build a new `solana_zk_token_sdk::zk_token_proof_instruction::ProofInstruction`, consider using `solana_zk_token_sdk::zk_token_proof_instruction::ProofInstruction::instruction_type` which returns `Option<solana_zk_token_sdk::zk_token_proof_instruction::ProofInstruction>`
+  --> src/zk_token_proof_instruction.rs:485:5
+
+error[E0599]: no variant or associated item named `decode_data` found for enum `solana_zk_token_sdk::zk_token_proof_instruction::ProofInstruction` in the current scope
+  --> src/extension/confidential_transfer/processor.rs:47:23
+   |
+47 | ...on::decode_data(&instruction.data).ok_or(ProgramError::InvalidInstructionData)
+   |        ^^^^^^^^^^^ variant or associated item not found in `ProofInstruction`
+   |
+note: if you're trying to build a new `solana_zk_token_sdk::zk_token_proof_instruction::ProofInstruction`, consider using `solana_zk_token_sdk::zk_token_proof_instruction::ProofInstruction::instruction_type` which returns `Option<solana_zk_token_sdk::zk_token_proof_instruction::ProofInstruction>`
+  --> src/zk_token_proof_instruction.rs:485:5
+
+error[E0609]: no field `pubkey` on type `&solana_zk_token_sdk::instruction::PubkeyValidityData`
+   --> src/extension/confidential_transfer/processor.rs:171:19
+    |
+171 |     if proof_data.pubkey != *encryption_pubkey {
+    |                   ^^^^^^ unknown field
+    |
+    = note: available fields are: `context`, `proof`
+help: one of the expressions' fields has a field of the same name
+    |
+171 |     if proof_data.context.pubkey != *encryption_pubkey {
+    |                   ++++++++
+
+error[E0599]: no variant or associated item named `VerifyCloseAccount` found for enum `solana_zk_token_sdk::zk_token_proof_instruction::ProofInstruction` in the current scope
+   --> src/extension/confidential_transfer/processor.rs:284:27
+    |
+284 |         ProofInstruction::VerifyCloseAccount,
+    |                           ^^^^^^^^^^^^^^^^^^ variant or associated item not found in `ProofInstruction`
+    |
+note: if you're trying to build a new `solana_zk_token_sdk::zk_token_proof_instruction::ProofInstruction`, consider using `solana_zk_token_sdk::zk_token_proof_instruction::ProofInstruction::instruction_type` which returns `Option<solana_zk_token_sdk::zk_token_proof_instruction::ProofInstruction>`
+   --> src/zk_token_proof_instruction.rs:485:5
+
+error[E0609]: no field `pubkey` on type `&solana_zk_token_sdk::instruction::WithdrawData`
+   --> src/extension/confidential_transfer/processor.rs:466:70
+    |
+466 |     if confidential_transfer_account.encryption_pubkey != proof_data.pubkey {
+    |                                                                      ^^^^^^ unknown field
+    |
+    = note: available fields are: `context`, `proof`
+help: one of the expressions' fields has a field of the same name
+    |
+466 |     if confidential_transfer_account.encryption_pubkey != proof_data.context.pubkey {
+    |                                                                      ++++++++
+
+error[E0609]: no field `final_ciphertext` on type `&solana_zk_token_sdk::instruction::WithdrawData`
+   --> src/extension/confidential_transfer/processor.rs:474:70
+    |
+474 | ...e_balance != proof_data.final_ciphertext {
+    |                            ^^^^^^^^^^^^^^^^ unknown field
+    |
+    = note: available fields are: `context`, `proof`
+help: one of the expressions' fields has a field of the same name
+    |
+474 |     if confidential_transfer_account.available_balance != proof_data.context.final_ciphertext {
+    |                                                                      ++++++++
+
+error[E0609]: no field `transfer_with_fee_pubkeys` on type `&solana_zk_token_sdk::instruction::TransferWithFeeData`
+   --> src/extension/confidential_transfer/processor.rs:525:23
+    |
+525 |         if proof_data.transfer_with_fee_pubkeys.auditor_pubkey
+    |                       ^^^^^^^^^^^^^^^^^^^^^^^^^ unknown field
+    |
+    = note: available fields are: `context`, `proof`
+help: one of the expressions' fields has a field of the same name
+    |
+525 |         if proof_data.context.transfer_with_fee_pubkeys.auditor_pubkey
+    |                       ++++++++
+
+error[E0609]: no field `transfer_with_fee_pubkeys` on type `&solana_zk_token_sdk::instruction::TransferWithFeeData`
+   --> src/extension/confidential_transfer/processor.rs:533:14
+    |
+533 |             .transfer_with_fee_pubkeys
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^ unknown field
+    |
+    = note: available fields are: `context`, `proof`
+help: one of the expressions' fields has a field of the same name
+    |
+533 |             .context.transfer_with_fee_pubkeys
+    |              ++++++++
+
+error[E0609]: no field `fee_parameters` on type `&solana_zk_token_sdk::instruction::TransferWithFeeData`
+   --> src/extension/confidential_transfer/processor.rs:563:33
+    |
+563 |         if u64::from(proof_data.fee_parameters.maximum_fee) != maximum_fee
+    |                                 ^^^^^^^^^^^^^^ unknown field
+    |
+    = note: available fields are: `context`, `proof`
+help: one of the expressions' fields has a field of the same name
+    |
+563 |         if u64::from(proof_data.context.fee_parameters.maximum_fee) != maximum_fee
+    |                                 ++++++++
+
+error[E0609]: no field `fee_parameters` on type `&solana_zk_token_sdk::instruction::TransferWithFeeData`
+   --> src/extension/confidential_transfer/processor.rs:564:37
+    |
+564 |             || u16::from(proof_data.fee_parameters.fee_rate_basis_points)
+    |                                     ^^^^^^^^^^^^^^ unknown field
+    |
+    = note: available fields are: `context`, `proof`
+help: one of the expressions' fields has a field of the same name
+    |
+564 |             || u16::from(proof_data.context.fee_parameters.fee_rate_basis_points)
+    |                                     ++++++++
+
+error[E0609]: no field `ciphertext_lo` on type `&solana_zk_token_sdk::instruction::TransferWithFeeData`
+   --> src/extension/confidential_transfer/processor.rs:571:24
+    |
+571 |             proof_data.ciphertext_lo.commitment,
+    |                        ^^^^^^^^^^^^^ unknown field
+    |
+    = note: available fields are: `context`, `proof`
+help: one of the expressions' fields has a field of the same name
+    |
+571 |             proof_data.context.ciphertext_lo.commitment,
+    |                        ++++++++
+
+error[E0609]: no field `ciphertext_lo` on type `&solana_zk_token_sdk::instruction::TransferWithFeeData`
+   --> src/extension/confidential_transfer/processor.rs:572:24
+    |
+572 |             proof_data.ciphertext_lo.source_handle,
+    |                        ^^^^^^^^^^^^^ unknown field
+    |
+    = note: available fields are: `context`, `proof`
+help: one of the expressions' fields has a field of the same name
+    |
+572 |             proof_data.context.ciphertext_lo.source_handle,
+    |                        ++++++++
+
+error[E0609]: no field `ciphertext_hi` on type `&solana_zk_token_sdk::instruction::TransferWithFeeData`
+   --> src/extension/confidential_transfer/processor.rs:575:24
+    |
+575 |             proof_data.ciphertext_hi.commitment,
+    |                        ^^^^^^^^^^^^^ unknown field
+    |
+    = note: available fields are: `context`, `proof`
+help: one of the expressions' fields has a field of the same name
+    |
+575 |             proof_data.context.ciphertext_hi.commitment,
+    |                        ++++++++
+
+error[E0609]: no field `ciphertext_hi` on type `&solana_zk_token_sdk::instruction::TransferWithFeeData`
+   --> src/extension/confidential_transfer/processor.rs:576:24
+    |
+576 |             proof_data.ciphertext_hi.source_handle,
+    |                        ^^^^^^^^^^^^^ unknown field
+    |
+    = note: available fields are: `context`, `proof`
+help: one of the expressions' fields has a field of the same name
+    |
+576 |             proof_data.context.ciphertext_hi.source_handle,
+    |                        ++++++++
+
+error[E0609]: no field `transfer_with_fee_pubkeys` on type `&solana_zk_token_sdk::instruction::TransferWithFeeData`
+   --> src/extension/confidential_transfer/processor.rs:585:25
+    |
+585 |             &proof_data.transfer_with_fee_pubkeys.source_pubkey,
+    |                         ^^^^^^^^^^^^^^^^^^^^^^^^^ unknown field
+    |
+    = note: available fields are: `context`, `proof`
+help: one of the expressions' fields has a field of the same name
+    |
+585 |             &proof_data.context.transfer_with_fee_pubkeys.source_pubkey,
+    |                         ++++++++
+
+error[E0609]: no field `ciphertext_lo` on type `&solana_zk_token_sdk::instruction::TransferWithFeeData`
+   --> src/extension/confidential_transfer/processor.rs:592:24
+    |
+592 |             proof_data.ciphertext_lo.commitment,
+    |                        ^^^^^^^^^^^^^ unknown field
+    |
+    = note: available fields are: `context`, `proof`
+help: one of the expressions' fields has a field of the same name
+    |
+592 |             proof_data.context.ciphertext_lo.commitment,
+    |                        ++++++++
+
+error[E0609]: no field `ciphertext_lo` on type `&solana_zk_token_sdk::instruction::TransferWithFeeData`
+   --> src/extension/confidential_transfer/processor.rs:593:24
+    |
+593 |             proof_data.ciphertext_lo.destination_handle,
+    |                        ^^^^^^^^^^^^^ unknown field
+    |
+    = note: available fields are: `context`, `proof`
+help: one of the expressions' fields has a field of the same name
+    |
+593 |             proof_data.context.ciphertext_lo.destination_handle,
+    |                        ++++++++
+
+error[E0609]: no field `ciphertext_hi` on type `&solana_zk_token_sdk::instruction::TransferWithFeeData`
+   --> src/extension/confidential_transfer/processor.rs:596:24
+    |
+596 |             proof_data.ciphertext_hi.commitment,
+    |                        ^^^^^^^^^^^^^ unknown field
+    |
+    = note: available fields are: `context`, `proof`
+help: one of the expressions' fields has a field of the same name
+    |
+596 |             proof_data.context.ciphertext_hi.commitment,
+    |                        ++++++++
+
+error[E0609]: no field `ciphertext_hi` on type `&solana_zk_token_sdk::instruction::TransferWithFeeData`
+   --> src/extension/confidential_transfer/processor.rs:597:24
+    |
+597 |             proof_data.ciphertext_hi.destination_handle,
+    |                        ^^^^^^^^^^^^^ unknown field
+    |
+    = note: available fields are: `context`, `proof`
+help: one of the expressions' fields has a field of the same name
+    |
+597 |             proof_data.context.ciphertext_hi.destination_handle,
+    |                        ++++++++
+
+error[E0609]: no field `transfer_with_fee_pubkeys` on type `&solana_zk_token_sdk::instruction::TransferWithFeeData`
+   --> src/extension/confidential_transfer/processor.rs:610:25
+    |
+610 |             &proof_data.transfer_with_fee_pubkeys.destination_pubkey,
+    |                         ^^^^^^^^^^^^^^^^^^^^^^^^^ unknown field
+    |
+    = note: available fields are: `context`, `proof`
+help: one of the expressions' fields has a field of the same name
+    |
+610 |             &proof_data.context.transfer_with_fee_pubkeys.destination_pubkey,
+    |                         ++++++++
+
+error[E0609]: no field `transfer_pubkeys` on type `&solana_zk_token_sdk::instruction::TransferData`
+   --> src/extension/confidential_transfer/processor.rs:622:23
+    |
+622 |         if proof_data.transfer_pubkeys.auditor_pubkey
+    |                       ^^^^^^^^^^^^^^^^ unknown field
+    |
+    = note: available fields are: `context`, `proof`
+help: one of the expressions' fields has a field of the same name
+    |
+622 |         if proof_data.context.transfer_pubkeys.auditor_pubkey
+    |                       ++++++++
+
+error[E0609]: no field `ciphertext_lo` on type `&solana_zk_token_sdk::instruction::TransferData`
+   --> src/extension/confidential_transfer/processor.rs:629:24
+    |
+629 |             proof_data.ciphertext_lo.commitment,
+    |                        ^^^^^^^^^^^^^ unknown field
+    |
+    = note: available fields are: `context`, `proof`
+help: one of the expressions' fields has a field of the same name
+    |
+629 |             proof_data.context.ciphertext_lo.commitment,
+    |                        ++++++++
+
+error[E0609]: no field `ciphertext_lo` on type `&solana_zk_token_sdk::instruction::TransferData`
+   --> src/extension/confidential_transfer/processor.rs:630:24
+    |
+630 |             proof_data.ciphertext_lo.source_handle,
+    |                        ^^^^^^^^^^^^^ unknown field
+    |
+    = note: available fields are: `context`, `proof`
+help: one of the expressions' fields has a field of the same name
+    |
+630 |             proof_data.context.ciphertext_lo.source_handle,
+    |                        ++++++++
+
+error[E0609]: no field `ciphertext_hi` on type `&solana_zk_token_sdk::instruction::TransferData`
+   --> src/extension/confidential_transfer/processor.rs:633:24
+    |
+633 |             proof_data.ciphertext_hi.commitment,
+    |                        ^^^^^^^^^^^^^ unknown field
+    |
+    = note: available fields are: `context`, `proof`
+help: one of the expressions' fields has a field of the same name
+    |
+633 |             proof_data.context.ciphertext_hi.commitment,
+    |                        ++++++++
+
+error[E0609]: no field `ciphertext_hi` on type `&solana_zk_token_sdk::instruction::TransferData`
+   --> src/extension/confidential_transfer/processor.rs:634:24
+    |
+634 |             proof_data.ciphertext_hi.source_handle,
+    |                        ^^^^^^^^^^^^^ unknown field
+    |
+    = note: available fields are: `context`, `proof`
+help: one of the expressions' fields has a field of the same name
+    |
+634 |             proof_data.context.ciphertext_hi.source_handle,
+    |                        ++++++++
+
+error[E0609]: no field `transfer_pubkeys` on type `&solana_zk_token_sdk::instruction::TransferData`
+   --> src/extension/confidential_transfer/processor.rs:643:25
+    |
+643 |             &proof_data.transfer_pubkeys.source_pubkey,
+    |                         ^^^^^^^^^^^^^^^^ unknown field
+    |
+    = note: available fields are: `context`, `proof`
+help: one of the expressions' fields has a field of the same name
+    |
+643 |             &proof_data.context.transfer_pubkeys.source_pubkey,
+    |                         ++++++++
+
+error[E0609]: no field `ciphertext_lo` on type `&solana_zk_token_sdk::instruction::TransferData`
+   --> src/extension/confidential_transfer/processor.rs:650:24
+    |
+650 |             proof_data.ciphertext_lo.commitment,
+    |                        ^^^^^^^^^^^^^ unknown field
+    |
+    = note: available fields are: `context`, `proof`
+help: one of the expressions' fields has a field of the same name
+    |
+650 |             proof_data.context.ciphertext_lo.commitment,
+    |                        ++++++++
+
+error[E0609]: no field `ciphertext_lo` on type `&solana_zk_token_sdk::instruction::TransferData`
+   --> src/extension/confidential_transfer/processor.rs:651:24
+    |
+651 |             proof_data.ciphertext_lo.destination_handle,
+    |                        ^^^^^^^^^^^^^ unknown field
+    |
+    = note: available fields are: `context`, `proof`
+help: one of the expressions' fields has a field of the same name
+    |
+651 |             proof_data.context.ciphertext_lo.destination_handle,
+    |                        ++++++++
+
+error[E0609]: no field `ciphertext_hi` on type `&solana_zk_token_sdk::instruction::TransferData`
+   --> src/extension/confidential_transfer/processor.rs:654:24
+    |
+654 |             proof_data.ciphertext_hi.commitment,
+    |                        ^^^^^^^^^^^^^ unknown field
+    |
+    = note: available fields are: `context`, `proof`
+help: one of the expressions' fields has a field of the same name
+    |
+654 |             proof_data.context.ciphertext_hi.commitment,
+    |                        ++++++++
+
+error[E0609]: no field `ciphertext_hi` on type `&solana_zk_token_sdk::instruction::TransferData`
+   --> src/extension/confidential_transfer/processor.rs:655:24
+    |
+655 |             proof_data.ciphertext_hi.destination_handle,
+    |                        ^^^^^^^^^^^^^ unknown field
+    |
+    = note: available fields are: `context`, `proof`
+help: one of the expressions' fields has a field of the same name
+    |
+655 |             proof_data.context.ciphertext_hi.destination_handle,
+    |                        ++++++++
+
+error[E0609]: no field `transfer_pubkeys` on type `&solana_zk_token_sdk::instruction::TransferData`
+   --> src/extension/confidential_transfer/processor.rs:661:25
+    |
+661 |             &proof_data.transfer_pubkeys.destination_pubkey,
+    |                         ^^^^^^^^^^^^^^^^ unknown field
+    |
+    = note: available fields are: `context`, `proof`
+help: one of the expressions' fields has a field of the same name
+    |
+661 |             &proof_data.context.transfer_pubkeys.destination_pubkey,
+    |                         ++++++++
+
+error[E0609]: no field `commitment` on type `FeeEncryption`
+   --> src/extension/confidential_transfer/processor.rs:791:29
+    |
+791 |             (ciphertext_fee.commitment, ciphertext_fee.destination_handle).into();
+    |                             ^^^^^^^^^^ unknown field
+    |
+    = note: available fields are: `0`
+
+error[E0609]: no field `destination_handle` on type `FeeEncryption`
+   --> src/extension/confidential_transfer/processor.rs:791:56
+    |
+791 |             (ciphertext_fee.commitment, ciphertext_fee.destination_handle).into();
+    |                                                        ^^^^^^^^^^^^^^^^^^ unknown field
+    |
+    = note: available fields are: `0`
+
+error[E0609]: no field `commitment` on type `FeeEncryption`
+   --> src/extension/confidential_transfer/processor.rs:793:28
+    |
+793 |             ciphertext_fee.commitment,
+    |                            ^^^^^^^^^^ unknown field
+    |
+    = note: available fields are: `0`
+
+error[E0609]: no field `withdraw_withheld_authority_handle` on type `FeeEncryption`
+   --> src/extension/confidential_transfer/processor.rs:794:28
+    |
+794 |             ciphertext_fee.withdraw_withheld_authority_handle,
+    |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ unknown field
+    |
+    = note: available fields are: `0`
+
+error[E0599]: no variant or associated item named `VerifyWithdrawWithheldTokens` found for enum `solana_zk_token_sdk::zk_token_proof_instruction::ProofInstruction` in the current scope
+   --> src/extension/confidential_transfer/processor.rs:986:27
+    |
+986 |         ProofInstruction::VerifyWithdrawWithheldTokens,
+    |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ variant or associated item not found in `ProofInstruction`
+    |
+note: if you're trying to build a new `solana_zk_token_sdk::zk_token_proof_instruction::ProofInstruction`, consider using `solana_zk_token_sdk::zk_token_proof_instruction::ProofInstruction::instruction_type` which returns `Option<solana_zk_token_sdk::zk_token_proof_instruction::ProofInstruction>`
+   --> src/zk_token_proof_instruction.rs:485:5
+
+error[E0599]: no variant or associated item named `VerifyWithdrawWithheldTokens` found for enum `solana_zk_token_sdk::zk_token_proof_instruction::ProofInstruction` in the current scope
+    --> src/extension/confidential_transfer/processor.rs:1117:27
+     |
+1117 |         ProofInstruction::VerifyWithdrawWithheldTokens,
+     |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ variant or associated item not found in `ProofInstruction`
+     |
+note: if you're trying to build a new `solana_zk_token_sdk::zk_token_proof_instruction::ProofInstruction`, consider using `solana_zk_token_sdk::zk_token_proof_instruction::ProofInstruction::instruction_type` which returns `Option<solana_zk_token_sdk::zk_token_proof_instruction::ProofInstruction>`
+    --> src/zk_token_proof_instruction.rs:485:5
+
+Some errors have detailed explanations: E0412, E0425, E0599, E0609.
+For more information about an error, try `rustc --explain E0412`.
+error: could not compile `spl-token-2022` (lib) due to 46 previous errors
+warning: build failed, waiting for other jobs to finish...
+venom@venom-Precision-5520:~/nw/solpay/programs/solpay$ 
+
