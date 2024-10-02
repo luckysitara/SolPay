@@ -50,7 +50,7 @@ Solpay is open-source and offers developers the freedom to customize the platfor
 ### Backend Setup
 1. Clone the repository:
    bash
-   git clone https://github.com/luckysitara/Solpay.git
+   git clone https://github.com/luckysitara/SolPay.git
    cd Solpay
    
 
@@ -102,8 +102,3 @@ We welcome contributions! Feel free to submit issues, feature requests, and pull
 Solpay is open-source under the MIT License. See [LICENSE](./LICENSE) for more details.
 
 ---
-
-This README provides a comprehensive overview of Solpay as a decentralized payment gateway with its major functionalities and integration options. Let me know if you need any additional sections or modifications!
-yes
-the demo video can be  a recorded  presentation of the pitch decks
-which possibly can be edited or something
