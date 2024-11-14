@@ -1,25 +1,34 @@
+/* Reset some basic styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body and font settings */
 body {
-    font-family: Arial, sans-serif;
-    color: #333;
+    font-family: 'Roboto', sans-serif;
+    color: #E9E9E9;
+    background-color: #1A1A1A;
+    line-height: 1.6;
 }
 
+/* Header Styling */
 header {
-    background-color: #2a2a2a;
-    color: #fff;
-    padding: 20px;
+    background-color: #121212;
+    color: #FFFFFF;
+    padding: 20px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
-header h1 {
+header .logo h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
     font-size: 2rem;
+    color: #FFB800;
 }
 
 nav ul {
@@ -32,21 +41,31 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #FFFFFF;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
 }
 
+nav ul li a:hover {
+    color: #FFB800;
+}
+
+/* Hero Section */
 .hero {
-    background-color: #00bcd4;
+    background-color: #0E1111;
     color: white;
     padding: 120px 20px;
     text-align: center;
+    background: linear-gradient(135deg, #1D2A2D 0%, #3C4C4E 100%);
 }
 
 .hero h2 {
     font-size: 3rem;
     margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
 }
 
 .hero p {
@@ -55,26 +74,27 @@ nav ul li a {
 }
 
 button {
-    background-color: #ff9800;
-    color: white;
+    background-color: #FFB800;
+    color: #1A1A1A;
     padding: 15px 30px;
-    font-size: 1rem;
+    font-size: 1.1rem;
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #e68900;
+    background-color: #D4A100;
 }
 
-.features, .security {
-    padding: 60px 20px;
+/* Features Section */
+.features {
+    padding: 80px 20px;
     text-align: center;
 }
 
-.features h2, .security h2 {
+.features h2 {
     font-size: 2.5rem;
     margin-bottom: 40px;
 }
@@ -83,67 +103,24 @@ button:hover {
     display: flex;
     justify-content: space-around;
     text-align: left;
+    flex-wrap: wrap;
 }
 
 .feature {
     width: 30%;
-    padding: 20px;
-    border: 1px solid #ddd;
+    padding: 30px;
+    background-color: #1A1A1A;
     border-radius: 8px;
-    transition: box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease;
+    margin-bottom: 20px;
 }
 
 .feature:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
-ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 20px;
-}
-
-ul li {
-    margin: 10px 0;
-}
-
-.cta {
-    background-color: #f5f5f5;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-input[type="email"] {
-    padding: 10px;
-    width: 300px;
-    margin-right: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-form button {
-    background-color: #00bcd4;
-    color: white;
-    padding: 10px 30px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 1rem;
-    transition: background-color 0.3s;
-}
-
-form button:hover {
-    background-color: #0097a7;
-}
-
-footer {
-    background-color: #2a2a2a;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-footer a {
-    color: #ff9800;
-    text-decoration: none;
-}
+.feature img {
+    width: 60px;
+    height: 60px;
+    margin-bottom:
