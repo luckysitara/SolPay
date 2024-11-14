@@ -6,12 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Solpay - Secure Multi-Chain Payments</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header Section -->
     <header>
         <nav>
-            <h1>Solpay</h1>
+            <div class="logo">
+                <h1>Solpay</h1>
+            </div>
             <ul>
                 <li><a href="#features">Features</a></li>
                 <li><a href="#security">Security</a></li>
@@ -24,27 +27,51 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h2>Empowering Secure, Multi-Chain Transactions</h2>
-            <p>Solpay enables seamless payments across multiple blockchains with auto-token swapping and enterprise-grade security.</p>
+            <h2>Secure Multi-Chain Transactions with Solpay</h2>
+            <p>Solpay provides seamless multi-chain payments, auto-token swapping, and enterprise-grade security.</p>
             <button id="cta-button">Get Started</button>
         </div>
     </section>
 
     <!-- Features Section -->
     <section class="features" id="features">
-        <h2>Features</h2>
+        <h2>Our Core Features</h2>
         <div class="feature-list">
+            <!-- Feature 1 -->
             <div class="feature">
+                <img src="images/multi-chain.svg" alt="Multi-Chain Support">
                 <h3>Multi-Chain Support</h3>
-                <p>Accept payments across multiple blockchain networks, including Solana, Ethereum, and Binance Smart Chain.</p>
+                <p>Integrate multiple blockchain networks like Solana, Ethereum, and Binance Smart Chain for seamless payments.</p>
             </div>
+            <!-- Feature 2 -->
             <div class="feature">
+                <img src="images/auto-swap.svg" alt="Auto-Token Swapping">
                 <h3>Auto-Token Swapping</h3>
-                <p>Automatically swap tokens to meet the merchant's requirements during payments using integrated protocols like Jupiter.</p>
+                <p>Automatically swap tokens to meet merchant requirements using Jupiter Protocol for seamless transactions.</p>
             </div>
+            <!-- Feature 3 -->
             <div class="feature">
+                <img src="images/nft-support.svg" alt="NFT Support">
+                <h3>NFT Support</h3>
+                <p>Send, receive, and store NFTs on the Solpay platform. Empower creators and users to interact with digital assets easily.</p>
+            </div>
+            <!-- Feature 4 -->
+            <div class="feature">
+                <img src="images/fiat-crypto.svg" alt="Fiat-to-Crypto Gateway">
+                <h3>Fiat-to-Crypto Gateway</h3>
+                <p>Allow users to convert fiat currency into cryptocurrency through integrated payment processors and card systems.</p>
+            </div>
+            <!-- Feature 5 -->
+            <div class="feature">
+                <img src="images/security.svg" alt="Security">
                 <h3>Enterprise-Grade Security</h3>
-                <p>Benefit from advanced security measures, including HSM (Hardware Security Module) and biometric authentication, for every transaction.</p>
+                <p>We implement advanced security technologies like hardware security modules (HSM) and biometric authentication for secure transactions.</p>
+            </div>
+            <!-- Feature 6 -->
+            <div class="feature">
+                <img src="images/privacy.svg" alt="Privacy Tools">
+                <h3>Privacy Preservation Tools</h3>
+                <p>Enable anonymous transactions with zero-knowledge proofs and end-to-end encryption to protect user data.</p>
             </div>
         </div>
     </section>
@@ -52,7 +79,7 @@
     <!-- Security Section -->
     <section class="security" id="security">
         <h2>World-Class Security</h2>
-        <p>Your assets and transactions are protected by top-tier security protocols, ensuring complete peace of mind.</p>
+        <p>Your assets are protected by cutting-edge security protocols. From encrypted transactions to biometric authentication, we ensure your peace of mind.</p>
         <ul>
             <li>Encrypted Transactions</li>
             <li>Biometric Authentication</li>
@@ -63,10 +90,17 @@
 
     <!-- Call-to-Action Section -->
     <section class="cta" id="cta">
-        <h2>Ready to Start Using Solpay?</h2>
-        <form id="signup-form">
-            <input type="email" id="email" placeholder="Enter your email" required>
-            <button type="submit">Join Solpay</button>
+        <h2>Join the Waitlist for Early Access</h2>
+        <form id="waitlist-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <select id="role" required>
+                <option value="" disabled selected>Choose Your Role</option>
+                <option value="developer">Developer</option>
+                <option value="merchant">Merchant</option>
+                <option value="user">Normal User</option>
+            </select>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <button type="submit">Join the Waitlist</button>
         </form>
     </section>
 
