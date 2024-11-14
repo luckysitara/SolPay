@@ -6,10 +6,11 @@
 
 body {
     font-family: Arial, sans-serif;
+    color: #333;
 }
 
 header {
-    background-color: #333;
+    background-color: #2a2a2a;
     color: #fff;
     padding: 20px;
     display: flex;
@@ -17,7 +18,7 @@ header {
     align-items: center;
 }
 
-nav h1 {
+header h1 {
     font-size: 2rem;
 }
 
@@ -27,33 +28,34 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 20px;
+    margin-left: 30px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .hero {
-    background-color: #4CAF50;
+    background-color: #00bcd4;
     color: white;
-    padding: 100px 20px;
+    padding: 120px 20px;
     text-align: center;
 }
 
-.hero-content h2 {
+.hero h2 {
     font-size: 3rem;
     margin-bottom: 20px;
 }
 
-.hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 40px;
 }
 
 button {
-    background-color: #ff6600;
+    background-color: #ff9800;
     color: white;
     padding: 15px 30px;
     font-size: 1rem;
@@ -64,15 +66,15 @@ button {
 }
 
 button:hover {
-    background-color: #e55b00;
+    background-color: #e68900;
 }
 
-.features {
+.features, .security {
     padding: 60px 20px;
     text-align: center;
 }
 
-.features h2 {
+.features h2, .security h2 {
     font-size: 2.5rem;
     margin-bottom: 40px;
 }
@@ -95,9 +97,19 @@ button:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
 .cta {
-    background-color: #f4f4f4;
-    padding: 40px 20px;
+    background-color: #f5f5f5;
+    padding: 60px 20px;
     text-align: center;
 }
 
@@ -110,7 +122,7 @@ input[type="email"] {
 }
 
 form button {
-    background-color: #4CAF50;
+    background-color: #00bcd4;
     color: white;
     padding: 10px 30px;
     border: none;
@@ -121,17 +133,17 @@ form button {
 }
 
 form button:hover {
-    background-color: #45a049;
+    background-color: #0097a7;
 }
 
 footer {
-    background-color: #333;
+    background-color: #2a2a2a;
     color: white;
     padding: 20px;
     text-align: center;
 }
 
 footer a {
-    color: #ff6600;
+    color: #ff9800;
     text-decoration: none;
 }
