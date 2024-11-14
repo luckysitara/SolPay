@@ -1,126 +1,140 @@
-/* Reset some basic styles */
+/* Reset default browser styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body and font settings */
+/* Set body background, font, and text color */
 body {
-    font-family: 'Roboto', sans-serif;
-    color: #E9E9E9;
-    background-color: #1A1A1A;
-    line-height: 1.6;
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fa;
+    color: #333;
 }
 
 /* Header Styling */
 header {
-    background-color: #121212;
-    color: #FFFFFF;
-    padding: 20px 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-}
-
-header .logo h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 2rem;
-    color: #FFB800;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-}
-
-nav ul li {
-    margin-left: 30px;
-}
-
-nav ul li a {
-    color: #FFFFFF;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #FFB800;
-}
-
-/* Hero Section */
-.hero {
-    background-color: #0E1111;
+    background-color: #0078d4;
     color: white;
-    padding: 120px 20px;
-    text-align: center;
-    background: linear-gradient(135deg, #1D2A2D 0%, #3C4C4E 100%);
-}
-
-.hero h2 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-}
-
-.hero p {
-    font-size: 1.25rem;
-    margin-bottom: 40px;
-}
-
-button {
-    background-color: #FFB800;
-    color: #1A1A1A;
-    padding: 15px 30px;
-    font-size: 1.1rem;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #D4A100;
-}
-
-/* Features Section */
-.features {
-    padding: 80px 20px;
+    padding: 2rem 0;
     text-align: center;
 }
 
-.features h2 {
+header h1 {
     font-size: 2.5rem;
-    margin-bottom: 40px;
 }
 
-.feature-list {
-    display: flex;
-    justify-content: space-around;
-    text-align: left;
-    flex-wrap: wrap;
+header p {
+    font-size: 1.25rem;
+}
+
+/* Section Styling */
+section {
+    padding: 3rem 1rem;
+}
+
+#features {
+    background-color: white;
+    margin: 2rem 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .feature {
-    width: 30%;
-    padding: 30px;
-    background-color: #1A1A1A;
+    padding: 1rem;
+    text-align: center;
+}
+
+.feature h3 {
+    font-size: 1.5rem;
+    color: #0078d4;
+}
+
+.feature p {
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.feature-image {
+    width: 100px;
+    height: auto;
+    margin-top: 1rem;
+}
+
+/* Waitlist Form */
+#waitlist {
+    background-color: #fff;
+    margin: 2rem 0;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: box-shadow 0.3s ease;
-    margin-bottom: 20px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.feature:hover {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+#waitlist h2 {
+    font-size: 2rem;
+    text-align: center;
 }
 
-.feature img {
-    width: 60px;
-    height: 60px;
-    margin-bottom:
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 0.75rem 2rem;
+    background-color: #0078d4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #005fa3;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .feature h3 {
+        font-size: 1.25rem;
+    }
+
+    #waitlist h2 {
+        font-size: 1.5rem;
+    }
+
+    form {
+        width: 80%;
+    }
+}
