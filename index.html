@@ -3,112 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Solpay - Secure Multi-Chain Payments</title>
+    <title>Solpay - A Decentralized Payment Gateway</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header Section -->
+
     <header>
-        <nav>
-            <div class="logo">
-                <h1>Solpay</h1>
-            </div>
-            <ul>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#security">Security</a></li>
-                <li><a href="#cta">Get Started</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <h1>Welcome to Solpay</h1>
+            <p>Your gateway to seamless multi-chain payments</p>
+        </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h2>Secure Multi-Chain Transactions with Solpay</h2>
-            <p>Solpay provides seamless multi-chain payments, auto-token swapping, and enterprise-grade security.</p>
-            <button id="cta-button">Get Started</button>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features" id="features">
-        <h2>Our Core Features</h2>
-        <div class="feature-list">
-            <!-- Feature 1 -->
+    <section id="features">
+        <div class="container">
+            <h2>Core Features</h2>
             <div class="feature">
-                <img src="images/multi-chain.svg" alt="Multi-Chain Support">
                 <h3>Multi-Chain Support</h3>
-                <p>Integrate multiple blockchain networks like Solana, Ethereum, and Binance Smart Chain for seamless payments.</p>
+                <p>Transact across different blockchain networks such as Ethereum, Solana, Binance Smart Chain, and more.</p>
+                <img src="https://www.binance.org/en/images/logo.svg" alt="Multi-chain support" class="feature-image">
             </div>
-            <!-- Feature 2 -->
+
             <div class="feature">
-                <img src="images/auto-swap.svg" alt="Auto-Token Swapping">
-                <h3>Auto-Token Swapping</h3>
-                <p>Automatically swap tokens to meet merchant requirements using Jupiter Protocol for seamless transactions.</p>
+                <h3>Secure Payments</h3>
+                <p>Ensure that your transactions are secure with advanced encryption and multi-layer security protocols.</p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Encryption_lock_icon.svg" alt="Secure Payments" class="feature-image">
             </div>
-            <!-- Feature 3 -->
+
             <div class="feature">
-                <img src="images/nft-support.svg" alt="NFT Support">
-                <h3>NFT Support</h3>
-                <p>Send, receive, and store NFTs on the Solpay platform. Empower creators and users to interact with digital assets easily.</p>
-            </div>
-            <!-- Feature 4 -->
-            <div class="feature">
-                <img src="images/fiat-crypto.svg" alt="Fiat-to-Crypto Gateway">
-                <h3>Fiat-to-Crypto Gateway</h3>
-                <p>Allow users to convert fiat currency into cryptocurrency through integrated payment processors and card systems.</p>
-            </div>
-            <!-- Feature 5 -->
-            <div class="feature">
-                <img src="images/security.svg" alt="Security">
-                <h3>Enterprise-Grade Security</h3>
-                <p>We implement advanced security technologies like hardware security modules (HSM) and biometric authentication for secure transactions.</p>
-            </div>
-            <!-- Feature 6 -->
-            <div class="feature">
-                <img src="images/privacy.svg" alt="Privacy Tools">
-                <h3>Privacy Preservation Tools</h3>
-                <p>Enable anonymous transactions with zero-knowledge proofs and end-to-end encryption to protect user data.</p>
+                <h3>Enhanced User Interface</h3>
+                <p>Easy-to-use interface designed for users, merchants, and developers alike.</p>
+                <img src="https://img.icons8.com/ios/452/user-interface.png" alt="User Interface" class="feature-image">
             </div>
         </div>
     </section>
 
-    <!-- Security Section -->
-    <section class="security" id="security">
-        <h2>World-Class Security</h2>
-        <p>Your assets are protected by cutting-edge security protocols. From encrypted transactions to biometric authentication, we ensure your peace of mind.</p>
-        <ul>
-            <li>Encrypted Transactions</li>
-            <li>Biometric Authentication</li>
-            <li>24/7 Monitoring</li>
-            <li>Zero-Knowledge Proofs</li>
-        </ul>
+    <section id="waitlist">
+        <div class="container">
+            <h2>Join the Waitlist</h2>
+            <form id="waitlistForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="role">Role:</label>
+                <select id="role" name="role" required>
+                    <option value="developer">Developer</option>
+                    <option value="merchant">Merchant</option>
+                    <option value="user">Normal User</option>
+                </select>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">Join Waitlist</button>
+            </form>
+        </div>
     </section>
 
-    <!-- Call-to-Action Section -->
-    <section class="cta" id="cta">
-        <h2>Join the Waitlist for Early Access</h2>
-        <form id="waitlist-form">
-            <input type="text" id="name" placeholder="Your Name" required>
-            <select id="role" required>
-                <option value="" disabled selected>Choose Your Role</option>
-                <option value="developer">Developer</option>
-                <option value="merchant">Merchant</option>
-                <option value="user">Normal User</option>
-            </select>
-            <input type="email" id="email" placeholder="Your Email" required>
-            <button type="submit">Join the Waitlist</button>
-        </form>
-    </section>
-
-    <!-- Footer Section -->
-    <footer id="contact">
-        <p>&copy; 2024 Solpay. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    <footer>
+        <div class="container">
+            <p>© 2024 Solpay. All rights reserved.</p>
+        </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        document.getElementById("waitlistForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const name = document.getElementById("name").value;
+            const role = document.getElementById("role").value;
+            const email = document.getElementById("email").value;
+
+            const userData = { name, role, email };
+            console.log("User Data:", userData);
+
+            // Save to localStorage (for demonstration purposes)
+            localStorage.setItem("waitlistUser", JSON.stringify(userData));
+            alert("Thank you for joining the waitlist!");
+        });
+    </script>
 </body>
 </html>
