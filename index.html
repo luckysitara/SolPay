@@ -1,82 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Solpay - A Decentralized Payment Gateway</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
     <header>
+      <nav>
+        <p>Solpay</p>
+        <ul>
+          <li>Buy</li>
+          <li>Sell</li>
+          <li>Swap</li>
+        </ul>
+        <button>Get Started</button>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Solpay</h1>
+      <h3>Your gateway to seamless multi-chain payments</h3>
+
+      <section id="features">
         <div class="container">
-            <h1>Welcome to Solpay</h1>
-            <p>Your gateway to seamless multi-chain payments</p>
+          <h2>Core Features</h2>
+          <div class="feature">
+            <h3>Multi-Chain Support</h3>
+            <p>
+              Transact across different blockchain networks such as Ethereum,
+              Solana, Binance Smart Chain, and more.
+            </p>
+            <img
+              src="https://www.binance.org/en/images/logo.svg"
+              alt="Multi-chain support"
+              class="feature-image" />
+          </div>
+
+          <div class="feature">
+            <h3>Secure Payments</h3>
+            <p>
+              Ensure that your transactions are secure with advanced encryption
+              and multi-layer security protocols.
+            </p>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Encryption_lock_icon.svg"
+              alt="Secure Payments"
+              class="feature-image" />
+          </div>
+
+          <div class="feature">
+            <h3>Enhanced User Interface</h3>
+            <p>
+              Easy-to-use interface designed for users, merchants, and
+              developers alike.
+            </p>
+            <img
+              src="https://img.icons8.com/ios/452/user-interface.png"
+              alt="User Interface"
+              class="feature-image" />
+          </div>
         </div>
+      </section>
+    </main>
+
+    <footer>
+      <section id="waitlist">
+        <div class="container">
+          <h2>Join the Waitlist</h2>
+          <form id="waitlistForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+            <label for="role">Role:</label>
+            <select id="role" name="role" required>
+              <option value="developer">Developer</option>
+              <option value="merchant">Merchant</option>
+              <option value="user">Normal User</option>
+            </select>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+            <button type="submit">Join Waitlist</button>
+          </form>
+        </div>
+      </section>
+
+      <div class="container">
+        <p>© 2024 Solpay. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- 
+    <header>
+      <div class="container">
+        <h1>Welcome to Solpay</h1>
+        <p>Your gateway to seamless multi-chain payments</p>
+      </div>
     </header>
 
     <section id="features">
-        <div class="container">
-            <h2>Core Features</h2>
-            <div class="feature">
-                <h3>Multi-Chain Support</h3>
-                <p>Transact across different blockchain networks such as Ethereum, Solana, Binance Smart Chain, and more.</p>
-                <img src="https://www.binance.org/en/images/logo.svg" alt="Multi-chain support" class="feature-image">
-            </div>
-
-            <div class="feature">
-                <h3>Secure Payments</h3>
-                <p>Ensure that your transactions are secure with advanced encryption and multi-layer security protocols.</p>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Encryption_lock_icon.svg" alt="Secure Payments" class="feature-image">
-            </div>
-
-            <div class="feature">
-                <h3>Enhanced User Interface</h3>
-                <p>Easy-to-use interface designed for users, merchants, and developers alike.</p>
-                <img src="https://img.icons8.com/ios/452/user-interface.png" alt="User Interface" class="feature-image">
-            </div>
+      <div class="container">
+        <h2>Core Features</h2>
+        <div class="feature">
+          <h3>Multi-Chain Support</h3>
+          <p>
+            Transact across different blockchain networks such as Ethereum,
+            Solana, Binance Smart Chain, and more.
+          </p>
+          <img
+            src="https://www.binance.org/en/images/logo.svg"
+            alt="Multi-chain support"
+            class="feature-image" />
         </div>
+
+        <div class="feature">
+          <h3>Secure Payments</h3>
+          <p>
+            Ensure that your transactions are secure with advanced encryption
+            and multi-layer security protocols.
+          </p>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Encryption_lock_icon.svg"
+            alt="Secure Payments"
+            class="feature-image" />
+        </div>
+
+        <div class="feature">
+          <h3>Enhanced User Interface</h3>
+          <p>
+            Easy-to-use interface designed for users, merchants, and developers
+            alike.
+          </p>
+          <img
+            src="https://img.icons8.com/ios/452/user-interface.png"
+            alt="User Interface"
+            class="feature-image" />
+        </div>
+      </div>
     </section>
 
     <section id="waitlist">
-        <div class="container">
-            <h2>Join the Waitlist</h2>
-            <form id="waitlistForm">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="role">Role:</label>
-                <select id="role" name="role" required>
-                    <option value="developer">Developer</option>
-                    <option value="merchant">Merchant</option>
-                    <option value="user">Normal User</option>
-                </select>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <button type="submit">Join Waitlist</button>
-            </form>
-        </div>
+      <div class="container">
+        <h2>Join the Waitlist</h2>
+        <form id="waitlistForm">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+          <label for="role">Role:</label>
+          <select id="role" name="role" required>
+            <option value="developer">Developer</option>
+            <option value="merchant">Merchant</option>
+            <option value="user">Normal User</option>
+          </select>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <button type="submit">Join Waitlist</button>
+        </form>
+      </div>
     </section>
 
     <footer>
-        <div class="container">
-            <p>© 2024 Solpay. All rights reserved.</p>
-        </div>
-    </footer>
+      <div class="container">
+        <p>© 2024 Solpay. All rights reserved.</p>
+      </div>
+    </footer> -->
 
     <script>
-        document.getElementById("waitlistForm").addEventListener("submit", function(event) {
-            event.preventDefault();
-            const name = document.getElementById("name").value;
-            const role = document.getElementById("role").value;
-            const email = document.getElementById("email").value;
+      document
+        .getElementById("waitlistForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const name = document.getElementById("name").value;
+          const role = document.getElementById("role").value;
+          const email = document.getElementById("email").value;
 
-            const userData = { name, role, email };
-            console.log("User Data:", userData);
+          const userData = { name, role, email };
+          console.log("User Data:", userData);
 
-            // Save to localStorage (for demonstration purposes)
-            localStorage.setItem("waitlistUser", JSON.stringify(userData));
-            alert("Thank you for joining the waitlist!");
+          // Save to localStorage (for demonstration purposes)
+          localStorage.setItem("waitlistUser", JSON.stringify(userData));
+          alert("Thank you for joining the waitlist!");
         });
     </script>
-</body>
+  </body>
 </html>
