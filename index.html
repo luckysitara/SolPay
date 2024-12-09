@@ -4,9 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Solpay - A Decentralized Payment Gateway</title>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-    </style>
+
     <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
@@ -70,28 +68,41 @@
     </main>
 
     <footer>
-      <section id="waitlist">
-        <div class="container">
+      <section>
+        <div class="container-waitlist">
           <h2>Join the Waitlist</h2>
           <form id="waitlistForm">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required />
-            <label for="role">Role:</label>
-            <select id="role" name="role" required>
-              <option value="developer">Developer</option>
-              <option value="merchant">Merchant</option>
-              <option value="user">Normal User</option>
-            </select>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required />
-            <button type="submit">Join Waitlist</button>
+            <div>
+              <label for="name">Name:</label>
+              <input
+                type="text"
+                placeholder="FullName..."
+                id="name"
+                name="name"
+                required />
+            </div>
+            <div>
+              <label for="role">Role:</label>
+              <select id="role" name="role" required>
+                <option value="developer">Developer</option>
+                <option value="merchant">Merchant</option>
+                <option value="user">Normal User</option>
+              </select>
+            </div>
+            <div>
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Email..."
+                name="email"
+                required />
+            </div>
+            <button class="join-btn" type="submit">Join Waitlist</button>
           </form>
         </div>
       </section>
-
-      <div class="container">
-        <p>© 2024 Solpay. All rights reserved.</p>
-      </div>
+      <p class="copyright">© 2024 Solpay. All rights reserved.</p>
     </footer>
 
     <script>

@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: 'Inter', arial;
 }
 
 .solpay {
@@ -86,22 +89,23 @@ h3 {
     background-size: cover;
     color: white;
 }
-#features{
-    /* background-color: lawngreen; */
-}
-.core-features{
+
+.core-features {
     text-align: center;
     padding: 1em;
- color: grey; 
+    color: grey;
     font-size: 2rem;
-} 
-.feature > h3{
+}
+
+.feature>h3 {
     color: #0078d4;
 }
-.feature > p {
+
+.feature>p {
     color: grey;
 }
-.container{
+
+.container {
     display: flex;
     flex-direction: column;
     gap: 2em;
@@ -109,5 +113,60 @@ h3 {
     padding: 0 2em;
     align-items: center;
     text-align: center;
+    height: 80vh;
     /* flex-wrap: wrap; */
+}
+
+.container-waitlist {
+    color: white;
+    width: 60%;
+    margin: 0 auto;
+    padding: 2em;
+}
+
+.container-waitlist>h2 {
+    /* text-align: center; */
+    margin: 1em 0;
+}
+
+#waitlistForm {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+input,
+select {
+    border: none;
+    padding: 1.4em 1em;
+    border-radius: 8px;
+    width: 100%;
+    outline: #0078d4;
+}
+
+.join-btn {
+    width: 50%;
+    max-width: 300px;
+    padding: 1em 2em;
+    border: none;
+    color: #0078d4;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all;
+    transition-duration: .5s;
+}
+
+.join-btn:hover {
+    color: #0091ff;
+}
+
+.copyright {
+    text-align: center;
+    color: white;
+    padding: 1em;
+}
+
+footer {
+    background-color: #0078d4;
 }
