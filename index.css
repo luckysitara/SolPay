@@ -166,6 +166,10 @@ select {
     color: white;
     padding: 1em;
 }
+.copyright:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
 
 footer {
     background-color: #0078d4;
