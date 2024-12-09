@@ -4,3 +4,110 @@
     margin: 0;
 }
 
+.solpay {
+    color: #0078d4;
+    font-size: 2em;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    gap: 3em;
+    align-items: center;
+    padding: 1em 2em;
+    background-color: rgb(240, 240, 240);
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    list-style: none;
+}
+
+li {
+    cursor: pointer;
+}
+
+ul>li {
+    font-weight: bolder;
+    transition: all;
+    color: grey;
+    transition-duration: .5s;
+}
+
+ul>li:hover {
+    text-decoration: underline;
+    color: #0078d4;
+
+}
+
+nav>button {
+    color: white;
+    background-color: #0078d4;
+    border: none;
+    padding: .5em 1em;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all;
+    transition-duration: .4s;
+}
+
+nav>button:hover {
+    color: #0078d4;
+    background-color: white;
+
+}
+
+h1,
+h3 {
+    text-align: center;
+}
+
+h1 {
+    font-weight: bolder;
+    font-size: 3rem;
+    padding: .5em;
+}
+
+h3 {
+    /* text-decoration: underline; */
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.intro {
+    height: 90vh;
+    background: url('https://iupana.com/wp-content/uploads/2021/10/criptomonedas-en-pagos.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+#features{
+    /* background-color: lawngreen; */
+}
+.core-features{
+    text-align: center;
+    padding: 1em;
+ color: grey; 
+    font-size: 2rem;
+} 
+.feature > h3{
+    color: #0078d4;
+}
+.feature > p {
+    color: grey;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    justify-content: space-around;
+    padding: 0 2em;
+    align-items: center;
+    text-align: center;
+    /* flex-wrap: wrap; */
+}
