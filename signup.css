@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+label{
+    color: grey;
+    background-color: white;
+    margin: 1em 0;
+    /* display: inline-block; */
+    /* text-align: left; */
+}
+.create-account{
+    text-align: center;
+}
+form{
+    text-align: left;
+}
+.login-link{
+    background-color: inherit;
+    color: white;
+    text-align: center;
+    margin: 1em 0;
+font: 1em sans-serif;
+}
+.login-link> a{
+    /* text-decoration: none; */
+    color: white;
+    
+}
