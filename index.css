@@ -47,7 +47,7 @@ ul>li:hover {
 
 }
 
-nav>button {
+nav>div>button {
     color: white;
     background-color: #0078d4;
     border: none;
@@ -59,7 +59,19 @@ nav>button {
     transition-duration: .4s;
 }
 
-nav>button:hover {
+nav>div>button>a {
+    text-decoration: none;
+    color: white;
+
+}
+
+nav>div>button>a:hover {
+    text-decoration: none;
+    color: #0078d4;
+
+}
+
+nav>div>button:hover {
     color: #0078d4;
     background-color: white;
 
@@ -166,7 +178,8 @@ select {
     color: white;
     padding: 1em;
 }
-.copyright:hover{
+
+.copyright:hover {
     text-decoration: underline;
     cursor: pointer;
 }
@@ -174,11 +187,13 @@ select {
 footer {
     background-color: #0078d4;
 }
-.image-container{
+
+.image-container {
     width: 50%;
     max-width: 400px;
     margin: 0 auto;
 }
-img{
+
+img {
     width: 100%;
 }

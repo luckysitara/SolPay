@@ -1,0 +1,52 @@
+*{
+    background-color: #0078d4;
+    /* text-align: center; */
+}
+h1{
+    color: white;
+}
+form{
+    background-color: white;
+    width: 70%;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    padding: 1.5em 2em;
+    border-radius: 8px;
+}
+form > div, p{
+    background-color: white;
+}
+p{
+    color: grey;
+}
+input{
+    background-color: white;
+    border: 1px solid grey;
+    margin: 1em;
+    outline: none;
+    
+}
+button{
+    color: white;
+    border: none;
+    padding: 1em 2em;
+    width: 100%;
+    margin: 1em;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+}
+.signup-link{
+    background-color: inherit;
+    color: white;
+    text-align: center;
+    margin: 1em 0;
+font: 1em sans-serif;
+}
+.signup-link> a{
+    /* text-decoration: none; */
+    color: white;
+    
+}
