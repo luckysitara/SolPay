@@ -1,4 +1,4 @@
-##SolPay
+SolPay
 ---
 
 ### **1. Core Features**
