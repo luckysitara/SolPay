@@ -1,4 +1,3 @@
-Here’s a step-by-step guide to implement a wallet connection feature for your **SolPay** project using **Solana's Web3.js**, integrated into a **React and Node.js** application:
 
 ---
 
